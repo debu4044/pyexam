@@ -19,11 +19,6 @@ class Fees(Student):
     def generate_receipt(self):
         print(f"Receipt - Roll No: {self.rollno}, Name: {self.name}, Fees Paid: {self.fees}")
     
-    # Method overriding
-    def display(self):
-        super().display()
-        print(f"Fees Paid: {self.fees}")
-
 class Result(Student):
     def __init__(self, name, rollno, marks):
         super().__init__(name, rollno, marks)
