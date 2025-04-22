@@ -1,0 +1,41 @@
+# Task 1: Define Student Class
+class Student:
+    def __init__(self, rollno, name, marks):
+        self.rollno = rollno
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print("Roll No:", self.rollno, "Name:", self.name, "Marks:", self.marks)
+
+# Task 2: Fees Class (Inheritance)
+class Fees(Student):
+    def __init__(self, rollno, name, marks, fees_paid):
+        super().__init__(rollno, name, marks)
+        self.fees_paid = fees_paid
+
+    def submit_fees(self, amount):
+        self.fees_paid = amount
+        print("Fees Submitted:", amount)
+
+    def generate_receipt(self):
+        print("Receipt - Roll No:", self.rollno, "Fees Paid:", self.fees_paid)
+
+# Task 3: Result Class (Inheritance)
+class Result(Student):
+    def __init__(self, rollno, name, marks):
+        super().__init__(rollno, name, marks)
+        self.grade = 'A' if marks >= 70 else 'B'
+
+    def display_result(self):
+        print("Marks:", self.marks, "Grade:", self.grade)
+
+# Task 4: Sort Students by Marks and Name
+students = [
+    Student(1, "Amita", 85),
+    Student(2, "Bharat", 75),
+    Student(3, "Chinmay", 90)
+]
+students.sort(key=lambda s: (s.marks, s.name))
+for student in students:
+    student.display()
