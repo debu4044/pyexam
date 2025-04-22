@@ -80,6 +80,11 @@ for i in range(1, number + 1):
 print("Factorial:", factorial)
 
 # 8. Reverse 5-digit Number
+number = int(input("Enter a number: "))
+numtostring = str(number)
+finalop = numtostring[::-1]
+print(finalop)
+
 # Reverse a 5-digit number
 num = int(input("Enter a 5-digit number: "))
 reverse = 0
