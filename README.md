@@ -1,1 +1,2 @@
 # pyexam
+FOR PERSONAL USE
