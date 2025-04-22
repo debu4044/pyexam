@@ -1,0 +1,48 @@
+import pandas as pd
+
+# Task 1: Create and Explore a DataFrame
+# 1. Create a DataFrame with sample data
+data = {
+    'Name': ['Amita', 'Bharat', 'Chinmay', 'Krish', 'Rithesh'],
+    'Age': [25, 30, 35, 34, 28],
+    'City': ['Mumbai', 'Pune', 'Nashik', 'Aurangabad', 'Nagpur']
+}
+df = pd.DataFrame(data)
+
+# 2. Use head() and tail() to view the data
+print("First few rows of the DataFrame:")
+print(df.head())
+print("\nLast few rows of the DataFrame:")
+print(df.tail())
+
+# Task 2: Select and Filter Data
+# 1. Select specific rows and columns from the DataFrame
+print("\nSelected Columns (Name and Age):")
+print(df[['Name', 'Age']])
+
+# 2. Filter rows based on a condition (e.g., Age > 30)
+print("\nRows where Age > 30:")
+print(df[df['Age'] > 30])
+
+# Task 3: Handle Missing Values
+# 1. Introduce missing values into the DataFrame
+df.loc[5] = [None, None, None]
+print("\nDataFrame with Missing Values:")
+print(df)
+
+# 2. Use fillna() and dropna() to handle missing values
+print("\nDataFrame after filling missing values:")
+print(df.fillna('Missing'))
+
+print("\nDataFrame after dropping rows with missing values:")
+print(df.dropna())
+
+# Task 4: Perform Data Operations
+# 1. Sort the data based on a specific column
+print("\nData sorted by Age:")
+print(df.sort_values(by='Age'))
+
+# 2. Perform grouping and aggregation operations
+grouped = df.groupby('City')['Age'].mean()
+print("\nAverage Age by City:")
+print(grouped)
