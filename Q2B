@@ -1,1 +1,38 @@
+import numpy as np
 
+# Task 1: Creating and Printing Ndarray
+# 1. Create a one-dimensional array and print its elements
+one_d_array = np.array([10, 20, 30, 40, 50])
+print("One-dimensional array:", one_d_array)
+
+# 2. Create a two-dimensional array and print its elements
+two_d_array = np.array([[1, 2, 3], [4, 5, 6]])
+print("Two-dimensional array:")
+for row in two_d_array:
+    print(row)
+
+# Task 2: Exploring Class and Attributes
+# 3. Display the shape, size, and data type of an array
+print("Shape of one_d_array:", one_d_array.shape)
+print("Size of one_d_array:", one_d_array.size)
+print("Data type of one_d_array:", one_d_array.dtype)
+
+# 4. Use attributes like ndim and itemsize to get information about the array
+print("Number of dimensions (ndim):", two_d_array.ndim)
+print("Item size (in bytes):", two_d_array.itemsize)
+
+# Task 3: Performing Basic Operations
+# Add, subtract, multiply, and divide two arrays element-wise
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+print("Addition:", array1 + array2)
+print("Subtraction:", array1 - array2)
+print("Multiplication:", array1 * array2)
+print("Division:", array1 / array2)
+
+# Task 4: Utilizing Mathematical Functions
+# Use aggregate functions like sum, mean, max, and min
+print("Sum:", array1.sum())
+print("Mean:", array1.mean())
+print("Max:", array1.max())
+print("Min:", array1.min())
